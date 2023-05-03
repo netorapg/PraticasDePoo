@@ -12,14 +12,14 @@ public class Jogo {
             int dadoGuerreiro = dado.nextInt(20);
             int dadoMago = dado.nextInt(20);
             if (dadoGuerreiro > dadoMago) {
-                System.out.println("O guerreiro tirou " + dadoGuerreiro + " no dado. O mago tirou " + dadoMago + " no dado.");
-                System.out.println("O guerreiro ataca primeiro!");
+                System.out.println(guerreiro.getNome() + " tirou " + dadoGuerreiro + " no dado. " + mago.getNome() + " tirou " + dadoMago + " no dado.");
+                System.out.println(guerreiro.getNome() + " ataca primeiro!");
                 guerreiro.atacar(mago); 
                 System.out.println(guerreiro.getNome() + " tem " + guerreiro.getVida() + " de vida.");
                 System.out.println(mago.getNome() + " tem " + mago.getVida() + " de vida.");
             } else {
-                System.out.println("O guerreiro tirou " + dadoGuerreiro + " no dado. O mago tirou " + dadoMago + " no dado.");
-                System.out.println("O mago ataca primeiro!");
+                System.out.println(guerreiro.getNome() + " tirou " + dadoGuerreiro + " no dado. " + mago.getNome() + " tirou " + dadoMago + " no dado.");
+                System.out.println(mago.getNome() + " ataca primeiro!");
                 mago.atacar(guerreiro);
                 System.out.println(guerreiro.getNome() + " tem " + guerreiro.getVida() + " de vida.");
                 System.out.println(mago.getNome() + " tem " + mago.getVida() + " de vida.");
