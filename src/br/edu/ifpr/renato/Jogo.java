@@ -6,15 +6,20 @@ public class Jogo {
         Guerreiro guerreiro = new Guerreiro("Conan", 100, 20, 10);
         Mago mago = new Mago("Gandalf", 80, 30, 5);
         Random dado = new Random();
-        int dadoGuerreiro = dado.nextInt(20);
-        int dadoMago = dado.nextInt(20);
+        
 
         while (guerreiro.estaVivo() && mago.estaVivo()) {
+            int dadoGuerreiro = dado.nextInt(20);
+            int dadoMago = dado.nextInt(20);
             if (dadoGuerreiro > dadoMago) {
+                System.out.println("O guerreiro tirou " + dadoGuerreiro + " no dado. O mago tirou " + dadoMago + " no dado.");
+                System.out.println("O guerreiro ataca primeiro!");
                 guerreiro.atacar(mago); 
                 System.out.println(guerreiro.getNome() + " tem " + guerreiro.getVida() + " de vida.");
                 System.out.println(mago.getNome() + " tem " + mago.getVida() + " de vida.");
             } else {
+                System.out.println("O guerreiro tirou " + dadoGuerreiro + " no dado. O mago tirou " + dadoMago + " no dado.");
+                System.out.println("O mago ataca primeiro!");
                 mago.atacar(guerreiro);
                 System.out.println(guerreiro.getNome() + " tem " + guerreiro.getVida() + " de vida.");
                 System.out.println(mago.getNome() + " tem " + mago.getVida() + " de vida.");
