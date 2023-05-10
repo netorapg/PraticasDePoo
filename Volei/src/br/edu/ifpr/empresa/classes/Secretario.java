@@ -19,6 +19,7 @@ public final class Secretario extends Funcionario {
         return genero;
     }
 
+    
     @Override
 
     public String getFuncao() {
